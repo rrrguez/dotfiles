@@ -1,1 +1,17 @@
+# ALIAS
 
+# Navegación más rápida
+alias ..    = "cd .."
+alias ...   = "cd ../.."
+alias ....  = "cd ../../.."
+alias ..... = "cd ../../../.."
+
+# Comandos git más usados
+alias gcl = "git clone"
+alias gb  = "git branch"
+alias gch = "git checkout"
+alias gs  = "git status"
+alias ga  = "git add"
+alias gco = "git commit"
+alias gps = "git push"
+alias gpl = "git pull"
