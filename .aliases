@@ -14,4 +14,4 @@ alias gs="git status"
 alias ga="git add"
 alias gco="git commit"
 alias gps="git push"
-alias gpl="git pull"
+alias gpl='git pull'
