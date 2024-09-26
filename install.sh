@@ -10,12 +10,12 @@ if [ -f /workspaces/.codespaces/.persistedshare/dotfiles/.aliases ]; then
     # Comprobar si la línea ya existe en .bashrc
     if grep -qxF 'source /workspaces/.codespaces/.persistedshare/dotfiles/.aliases' ~/.bashrc; then
         echo "La fuente del archivo .aliases ya está en .bashrc"
-        source ~/.bashrc
     else
         echo "Añadiendo fuente de .aliases a .bashrc"
         echo 'source /workspaces/.codespaces/.persistedshare/dotfiles/.aliases' >> ~/.bashrc
-        source ~/.bashrc
     fi
+    /workspaces/.codespaces/.persistedshare/dotfiles/install.sh
+    source ~/.bashrc
 else
     echo "Error: Archivo .aliases no encontrado"
 fi
