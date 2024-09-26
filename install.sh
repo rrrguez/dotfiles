@@ -14,7 +14,6 @@ if [ -f /workspaces/.codespaces/.persistedshare/dotfiles/.aliases ]; then
         echo "Añadiendo fuente de .aliases a .bashrc"
         echo 'source /workspaces/.codespaces/.persistedshare/dotfiles/.aliases' >> ~/.bashrc
     fi
-    /workspaces/.codespaces/.persistedshare/dotfiles/install.sh
     source ~/.bashrc
 else
     echo "Error: Archivo .aliases no encontrado"
