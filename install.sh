@@ -4,7 +4,7 @@
 echo "Ejecutando install.sh..."
 
 # Verificar si el archivo .aliases existe
-if [ -f /workspace/path/to/dotfiles/.aliases ]; then
+if [ -f /workspace/.codespaces/.persistedshare/dotfiles/.aliases ]; then
     echo "Archivo .aliases encontrado, añadiendo a .bashrc"
     
     # Comprobar si la línea ya existe en .bashrc
