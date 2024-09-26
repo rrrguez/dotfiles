@@ -1,7 +1,19 @@
 #!/bin/bash
 
-# Asegurarse de que el archivo .aliases existe y se puede cargar
-if [ -f /workspaces/.codespaces/.persistedshare/dotfiles/.aliases ]; then
-    echo "Sourcing aliases from dotfiles"
-    grep -qxF 'source /workspaces/.codespaces/.persistedshare/dotfiles/.aliases' ~/.bashrc || echo 'source /workspaces/.codespaces/.persistedshare/dotfiles/.aliases' >> ~/.bashrc
+# Mensaje de inicio para saber si se está ejecutando
+echo "Ejecutando install.sh..."
+
+# Verificar si el archivo .aliases existe
+if [ -f /workspace/path/to/dotfiles/.aliases ]; then
+    echo "Archivo .aliases encontrado, añadiendo a .bashrc"
+    
+    # Comprobar si la línea ya existe en .bashrc
+    if grep -qxF 'source /workspaces/.codespaces/.persistedshare/dotfiles/.aliases' ~/.bashrc; then
+        echo "La fuente del archivo .aliases ya está en .bashrc"
+    else
+        echo "Añadiendo fuente de .aliases a .bashrc"
+        echo 'source /workspaces/.codespaces/.persistedshare/dotfiles/.aliases' >> ~/.bashrc
+    fi
+else
+    echo "Error: Archivo .aliases no encontrado"
 fi
